@@ -1,0 +1,96 @@
+\doxysection{Класс Connection}
+\hypertarget{classConnection}{}\label{classConnection}\index{Connection@{Connection}}
+
+
+Класс для управления сетевым соединением с сервером  
+
+
+
+
+{\ttfamily \#include $<$connection.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classConnection_a1c0092a7af3d53576d73db10cb21fc1f}{conn}} (const \mbox{\hyperlink{structParams}{Params}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Установка соединения и обмен данными с сервером \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления сетевым соединением с сервером 
+
+Обеспечивает установку соединения, аутентификацию и передачу данных 
+
+\doxysubsection{Методы}
+\Hypertarget{classConnection_a1c0092a7af3d53576d73db10cb21fc1f}\label{classConnection_a1c0092a7af3d53576d73db10cb21fc1f} 
+\index{Connection@{Connection}!conn@{conn}}
+\index{conn@{conn}!Connection@{Connection}}
+\doxysubsubsection{\texorpdfstring{conn()}{conn()}}
+{\footnotesize\ttfamily int Connection\+::conn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structParams}{Params}} \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Установка соединения и обмен данными с сервером 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em p} & Указатель на параметры соединения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0 при успешном выполнении 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em system\+\_\+error} & при ошибках сетевого взаимодействия\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em p} & Указатель на параметры соединения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0 при успешном выполнении 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em system\+\_\+error} & при ошибках сетевого взаимодействия\\
+\hline
+\end{DoxyExceptions}
+Метод выполняет\+:
+\begin{DoxyItemize}
+\item Создание сокета и установку соединения
+\item Аутентификацию с использованием соли и хеширования пароля
+\item Чтение векторов из файла и передачу на сервер
+\item Получение результатов от сервера и запись в файл 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Семейство адресов IPv4
+
+\texorpdfstring{$<$}{<} Автоматический выбор порта
+
+\texorpdfstring{$<$}{<} Автоматический выбор адреса
+
+\texorpdfstring{$<$}{<} Семейство адресов IPv4
+
+\texorpdfstring{$<$}{<} Порт сервера
+
+\texorpdfstring{$<$}{<} IP-\/адрес сервера
+
+\texorpdfstring{$<$}{<} Чтение логина из файла
+
+\texorpdfstring{$<$}{<} Чтение пароля из файла
+
+\texorpdfstring{$<$}{<} Количество векторов для обработки
+
+\texorpdfstring{$<$}{<} Размер текущего вектора
+
+\texorpdfstring{$<$}{<} Вектор числовых значений
+
+\texorpdfstring{$<$}{<} Число в сетевом порядке байт
+
+\texorpdfstring{$<$}{<} Результат обработки от сервера
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{connection_8h}{connection.\+h}}\item 
+\mbox{\hyperlink{connection_8cpp}{connection.\+cpp}}\end{DoxyCompactItemize}
