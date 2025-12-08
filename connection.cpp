@@ -109,3 +109,6 @@ int Communicator::conn(const Params* p){
     close(s);
 return 0;
 };
+
+
+
