@@ -1,0 +1,83 @@
+\doxysection{Класс Data\+Reader}
+\hypertarget{classDataReader}{}\label{classDataReader}\index{DataReader@{DataReader}}
+
+
+Класс для чтения и передачи данных через сетевое соединение  
+
+
+
+
+{\ttfamily \#include $<$connection.\+h$>$}
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classDataReader_a822d75ba1360fb34b16f7caa9616781f}{datareader}} (const \mbox{\hyperlink{structParams}{Params}} \texorpdfstring{$\ast$}{*}p, int s)
+\begin{DoxyCompactList}\small\item\em Чтение данных из файла и передача через сокет \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для чтения и передачи данных через сетевое соединение 
+
+Обрабатывает файлы с векторами и передает их на сервер 
+
+\doxysubsection{Методы}
+\Hypertarget{classDataReader_a822d75ba1360fb34b16f7caa9616781f}\label{classDataReader_a822d75ba1360fb34b16f7caa9616781f} 
+\index{DataReader@{DataReader}!datareader@{datareader}}
+\index{datareader@{datareader}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{datareader()}{datareader()}}
+{\footnotesize\ttfamily int Data\+Reader\+::datareader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structParams}{Params}} \texorpdfstring{$\ast$}{*}}]{p,  }\item[{int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Чтение данных из файла и передача через сокет 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em p} & Указатель на параметры с именами файлов \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Дескриптор сокета для передачи данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0 при успешном выполнении 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em system\+\_\+error} & при ошибках ввода-\/вывода или сетевого взаимодействия\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em p} & Указатель на параметры с именами файлов \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Дескриптор сокета для передачи данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0 при успешном выполнении 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em system\+\_\+error} & при ошибках ввода-\/вывода или сетевого взаимодействия\\
+\hline
+\end{DoxyExceptions}
+Метод выполняет\+:
+\begin{DoxyItemize}
+\item Чтение количества векторов из файла
+\item Передачу размеров и элементов каждого вектора на сервер
+\item Получение результатов от сервера и запись в файл 
+\end{DoxyItemize}\texorpdfstring{$<$}{<} Количество векторов для обработки
+
+\texorpdfstring{$<$}{<} Размер текущего вектора
+
+\texorpdfstring{$<$}{<} Вектор числовых значений
+
+\texorpdfstring{$<$}{<} Число в сетевом порядке байт
+
+\texorpdfstring{$<$}{<} Результат обработки от сервера
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{connection_8h}{connection.\+h}}\item 
+\mbox{\hyperlink{connection_8cpp}{connection.\+cpp}}\end{DoxyCompactItemize}
